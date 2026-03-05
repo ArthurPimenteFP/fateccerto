@@ -4,7 +4,7 @@
 
 
 # 📦 Criar ambiente virtual
-python -m venv venv
+python -m venv venv OU py -m venv venv 
 
 # ▶️ Ativar ambiente virtual
 venv\Scripts\activate
@@ -17,4 +17,4 @@ pip install requests
 pip freeze > requirements.txt
 
 # 🚀 Executar o projeto
-python app.py
+python app.py OU py app.py
