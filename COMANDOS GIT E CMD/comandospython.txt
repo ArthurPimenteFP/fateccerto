@@ -1,0 +1,20 @@
+====================================
+💻 GUIA RÁPIDO DE COMANDOS 
+====================================
+
+
+# 📦 Criar ambiente virtual
+python -m venv venv
+
+# ▶️ Ativar ambiente virtual
+venv\Scripts\activate
+
+# 📚 Instalar bibliotecas
+pip install flask
+pip install requests
+
+# 📝 Salvar dependências do projeto
+pip freeze > requirements.txt
+
+# 🚀 Executar o projeto
+python app.py
