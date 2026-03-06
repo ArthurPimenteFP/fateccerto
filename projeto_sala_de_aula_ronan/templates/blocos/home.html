@@ -1,7 +1,24 @@
 {% extends "template.html" %}
 
-{%block titulo%} Eu sou a home {% endblock %}
+{% block titulo %}
+Eu sou a home
+{% endblock %}
 
 {% block conteudo %}
-    <h1 style="color: yellow;padding: 50px;"> </h1>Home</h1>
+<h1 class="text-warning text-center py-5">Home</h1>
+
+<!-- Exemplo de card Bootstrap -->
+<div class="card text-center">
+  <div class="card-header">
+    Boas-vindas
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Olá, visitante!</h5>
+    <p class="card-text">Essa é a página inicial com Bootstrap.</p>
+    <a href="#" class="btn btn-primary">Saiba mais</a>
+  </div>
+  <div class="card-footer text-muted">
+    Atualizado recentemente
+  </div>
+</div>
 {% endblock %}

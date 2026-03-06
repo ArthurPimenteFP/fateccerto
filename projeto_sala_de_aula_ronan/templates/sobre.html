@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+
+{% block titulo %}
+Sobre
+{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <h1 class="display-4">Sobre o Sistema de Gestão</h1>
+    <p class="lead">
+        Este sistema foi desenvolvido ao longo do semestre na disciplina
+        Programação para Internet — FATEC Jahu. O objetivo é gerenciar dados de maneira simples e intuitiva.
+    </p>
+
+    <h2 class="display-5">Funcionalidades</h2>
+    <ul>
+        <li>Gerenciamento de usuários e perfis.</li>
+        <li>Controle de produtos e estoque.</li>
+        <li>Relatórios detalhados e gráficos.</li>
+        <li>Interface responsiva e amigável.</li>
+    </ul>
+
+    <h2 class="display-5 mt-4">Imagem ilustrativa</h2>
+    <img src="{{ url_for('static', filename='imgs/fatec foto.jfif') }}" 
+         alt="Imagem sobre o sistema" 
+         class="img-principal">
+
+    <a href="/inicio" class="btn btn-primary mt-4">Voltar ao Início</a>
+</div>
+{% endblock %}

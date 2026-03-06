@@ -1,65 +1,65 @@
-/* style.css - fundo branco com cores chamativas */
+/* =======================================
+   style.css - Fundo branco com cores chamativas
+   Todos os textos em preto (#000) e laranja (#ff8c42)
+   ======================================= */
 
-/* Corpo da página */
+/* ------------------------------
+   Corpo da página
+   ------------------------------ */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff; /* fundo branco */
     margin: 0;
     padding: 0;
-    color: #000000; /* texto preto padrão */
+    color: #000000; /* texto padrão do corpo */
 }
 
-/* Navbar */
+/* ------------------------------
+   Navbar
+   ------------------------------ */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff8c42; /* laranja vibrante */
+    background-color: #ff8c42; /* fundo laranja */
     padding: 20px 30px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.navbar-brand {
+/* Navbar brand (título Sistema de Gestão) */
+.navbar .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #000000; /* preto para destacar */
+    color: #000000 !important; /* força preto */
     text-decoration: none;
 }
 
-.navbar-nav {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-nav li {
-    margin-left: 25px;
-}
-
-.navbar-nav a {
-    color: #000000;
-    text-decoration: none;
+/* Navbar links (Home, Produtos, Perfil) */
+.navbar .navbar-nav .nav-link {
+    color: #000000 !important; /* força preto */
     font-weight: 600;
-    position: relative;
+    text-decoration: none;
     transition: all 0.3s;
 }
 
-.navbar-nav a:hover {
-    color: #ffffff; /* branco no hover */
+.navbar .navbar-nav .nav-link:hover {
+    color: #ff8c42 !important; /* laranja no hover */
     transform: scale(1.1);
 }
 
-/* Container principal */
+/* ------------------------------
+   Container principal
+   ------------------------------ */
 .container {
     max-width: 900px;
     margin: 60px auto;
     padding: 40px;
-    background-color: #fff8f0; /* fundo levemente creme */
+    background-color: #fff8f0; /* fundo creme */
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
+    color: #000000; /* todos os textos dentro do container */
 }
 
 .container:hover {
@@ -67,32 +67,38 @@ body {
     box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
-/* Título principal */
+/* ------------------------------
+   Título principal (display-4)
+   ------------------------------ */
 .display-4 {
     font-size: 3rem;
     font-weight: 800;
-    color: #ff8c42; /* laranja vibrante */
+    color: #ff8c42; /* laranja */
     margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
     transition: color 0.3s;
 }
 
 .display-4:hover {
-    color: #ff5722; /* laranja mais intenso no hover */
+    color: #ff5722; /* laranja intenso no hover */
 }
 
-/* Texto principal */
+/* ------------------------------
+   Texto principal (.lead, parágrafos)
+   ------------------------------ */
 .lead {
     font-size: 1.25rem;
-    color: #000000; /* preto para destaque */
+    color: #000000; /* preto */
     margin-bottom: 25px;
     line-height: 1.6;
 }
 
-/* Alertas */
+/* ------------------------------
+   Alertas (alert-info)
+   ------------------------------ */
 .alert-info {
     background-color: #fff3e0; /* fundo laranja claro */
-    color: #ff5722; /* laranja escuro para destaque */
+    color: #000000 !important; /* texto preto */
     padding: 18px 22px;
     border-radius: 12px;
     font-weight: 500;
@@ -105,27 +111,32 @@ body {
     background-color: #ffe0b2; /* laranja mais claro no hover */
 }
 
-/* Botão */
+/* ------------------------------
+   Botões (.btn-primary)
+   ------------------------------ */
 .btn-primary {
     display: inline-block;
     background: linear-gradient(45deg, #ff8c42, #ff5722);
-    color: #ffffff;
-    text-decoration: none;
+    color: #000000 !important; /* força texto preto */
     padding: 14px 28px;
     font-size: 1.15rem;
     font-weight: 600;
     border-radius: 50px;
     transition: all 0.4s;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    text-decoration: none;
 }
 
 .btn-primary:hover {
     background: linear-gradient(45deg, #ff5722, #ff8c42);
+    color: #000000 !important; /* mantém texto preto */
     transform: translateY(-4px) scale(1.07);
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* Imagem principal */
+/* ------------------------------
+   Imagem principal (.img-principal)
+   ------------------------------ */
 .img-principal {
     display: block;
     margin: 30px auto;
@@ -133,7 +144,6 @@ body {
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .img-principal:hover {
@@ -141,7 +151,20 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
-/* Responsividade */
+/* ------------------------------
+   Footer
+   ------------------------------ */
+footer {
+    color: #000000 !important; /* texto preto */
+    background-color: #ff8c42; /* fundo laranja */
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+/* ------------------------------
+   Responsividade
+   ------------------------------ */
 @media (max-width: 768px) {
     .display-4 {
         font-size: 2.2rem;
