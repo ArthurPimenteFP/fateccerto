@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documento</title>
+  
+
+
+
+</head>
+<body>
+
+<h1>Recebendo variaveis do Python </h1>
+<p><b> Nome   </b> {{nome}} </p>
+<p><b> calculo da idade   </b> nasceu em: [{{ano_nascimento}}] e tem {{idade}}anos</p>
+<p><b> voce tera 50 anos   </b> {{ano_nascimento + 50}}</p>
+
+
+<h1>Filtros de texto  </h1>
+<p>deixando o texto em maiusculas: {{ texto|upper }} </p>
+<p>deixando o texto truncado: {{texto|truncate(5) }} </p>
+
+
+<h1>usando IF/ELIF e ELSE </h1>
+{% if ativo %}
+<p style="color: green">ATIVO</p>
+{& elif ativo == 'erro' %}
+<p style="color: red">ERRO</p>
+{% else %}
+<p style="color: yellow">INATIVO</p>
+{% endif %}
+
+<h1>FOR</h1>
+{#loop.index: numero da interaçao atual (comeca em 1 ) #}
+<UL> 
+{% for user in pessoas %}
+    <li>[{{loop.index}}] - {{user}} </li>
+{% endfor %}
+</UL>
+
+
+
+</body>
